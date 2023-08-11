@@ -3,6 +3,7 @@ import './globals.css' //tüm sayfalarda kullanabilelim diye layout sayfasına y
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import Providers from './Providers'
+import Tabs from '@/components/Tabs'
 
 const layout = ({children}) => {
   return (
@@ -11,6 +12,7 @@ const layout = ({children}) => {
         <body> 
           <Providers>
             <Header/>
+              <Tabs/>
               {children}
             <Footer/>
           </Providers>
