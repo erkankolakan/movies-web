@@ -6,3 +6,15 @@
  Header Footer gibi yapıları kullanabilmek için src altında components klasörü oluşturuyoruz. İçerisine header.jsx ve footer.jsx sayfalarını oluşturuyoruz.
 
  Dark mode olayı next-themes özelliğini kullanarak yapıyoruz.
+ 1- İlk önce sarmalama işlemleri için app altına Provider sayfası oluşturuyoruz. Providers sayfasıda dışarıdan children parametresi alıyor. Bu children öğesini next-themes den aldığımız <ThemeProvider> ile sarmalıyoruz ve yine ThemeProvider next-themes den aldığımız parametreleri yazıyoruz
+
+ 2- Providers sayfasını lyout sayfasında çaığırıyouz ve body etiletinin hemen altına yazarak tüm sayfayı sarmalımış oluyoruz.
+
+ 3- components klasörü altına thmecomp diye bir sayda açtık. Bu sayfada da aslında bizim iconlarımızın kontorülünü. system renginin anlık olarak ne olduğunu kontrol ettik.
+
+    
+ ! kişileştirilmiş renkleri " <div className='p-5 my-3 bg-gray-200 dark:bg-gray-900'> " şeklinde yapabiliriz.
+
+
+ sayfaya apimizi https://developer.themoviedb.org/ üzerinden çektik sitenin bize vermiş olduğu key değerini https://api.themoviedb.org/3/${searchParams.genre ? "movie/" + searchParams.genre : "trending/all/day"}?api_key=${"ad865d6b81a7bf7d4dcc774d2ed3d700"} şeklinde değerlendirdik. Burdaki sistem odukça önemlidir iyice okumayı tavsiye ederim. Resimleri uzaktan çektiğimiz için next.config.js içerise çektiğimiz resmin domain değerini yazıyoruz.
+
