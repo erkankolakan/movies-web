@@ -2,15 +2,18 @@ import React from 'react'
 import './globals.css' //tüm sayfalarda kullanabilelim diye layout sayfasına yazdım.
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
+import Providers from './Providers'
 
 const layout = ({children}) => {
   return (
     <html lang="en">
         {/* <title>sekme başlığı</title> */}
         <body> 
-          <Header/>
-            {children}
-          <Footer/>
+          <Providers>
+            <Header/>
+              {children}
+            <Footer/>
+          </Providers>
         </body>
     </html>
   )
