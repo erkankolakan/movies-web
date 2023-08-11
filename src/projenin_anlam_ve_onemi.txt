@@ -1,0 +1,6 @@
+    Projenin Anlam ve Önemi
+ Projeyi oluşturduktan sonra layout sayfasını oluşturuyoruz. Bu sayfa dışarıdann bir değer alır bu aldığı değeri html tagları arasında bulunan body tagları arasına yazıyoruz.
+
+ Tüm sayfalar üzerinde etkili olmasını beklediğim sayfam globals.css sayfasısıdır. Tabiki her sayfada etkili olabilmesi için layout sayfasında import etmemiz gerekmekte.
+
+ Header Footer gibi yapıları kullanabilmek için src altında components klasörü oluşturuyoruz. İçerisine header.jsx ve footer.jsx sayfalarını oluşturuyoruz
