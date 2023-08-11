@@ -1,9 +1,12 @@
 import React from 'react'
 
 const Footer = () => {
+
+
+
   return (
     <div>
-     Burası Footer
+     {/* Burası Footer */}
     </div>
   )
 }

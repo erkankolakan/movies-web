@@ -5,8 +5,8 @@ import {useSearchParams} from "next/navigation"
 
 const Tabs = () => {
 
-    const searchParams = useSearchParams()
-    const genre = searchParams.get("genre")
+    const searchParams = useSearchParams() 
+    const genre = searchParams.get("genre") //sayfanın uzantısındaki değeri useSearchParams() ile alıyoruz.
     
     console.log(genre)
     const tabs = [
@@ -23,6 +23,8 @@ const Tabs = () => {
             url:"upcoming"
         }
     ]
+
+    //bu yapı önemlidir aslında url kısmına yazmış olduğumuz upcoming ,lates, populer değerleri boş değerler değil onların çektiğimiz api üzerinde değişiyor olması çektiğimiz apiden gelen resimlerin detay bilgilerinin değişmesine ve katagörilere göre gelmesini sağlayacak.
 
 
   return (
