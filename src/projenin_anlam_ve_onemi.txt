@@ -17,4 +17,5 @@
 
 
  sayfaya apimizi https://developer.themoviedb.org/ üzerinden çektik sitenin bize vermiş olduğu key değerini https://api.themoviedb.org/3/${searchParams.genre ? "movie/" + searchParams.genre : "trending/all/day"}?api_key=${"ad865d6b81a7bf7d4dcc774d2ed3d700"} şeklinde değerlendirdik. Burdaki sistem odukça önemlidir iyice okumayı tavsiye ederim. Resimleri uzaktan çektiğimiz için next.config.js içerise çektiğimiz resmin domain değerini yazıyoruz.
+ 
 
