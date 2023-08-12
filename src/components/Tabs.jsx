@@ -8,7 +8,6 @@ const Tabs = () => {
     const searchParams = useSearchParams() 
     const genre = searchParams.get("genre") //sayfanın uzantısındaki değeri useSearchParams() ile alıyoruz.
     
-    console.log(genre)
     const tabs = [
         {
             name:"En Populer",
