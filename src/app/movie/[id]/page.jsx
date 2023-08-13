@@ -1,5 +1,7 @@
+"use client"
 import React from 'react'
 import Image from 'next/image'
+import { motion } from "framer-motion"
 
 
     const getMovie = async(id) => {
@@ -22,18 +24,23 @@ const Page = async({params}) => {
   
 
   return (
-    <div className='relative p-7 min-h-screen'>
+    <motion.div className='relative p-7 h-[77vh]'
+    
+    initial={{opacity:0 ,scale:.9}}
+    animate={{opacity:1,scale:1}}
+    transition={{delay:0.5 ,duration:0.5}}
+    >
 
-        <Image style={{objectFit:'cover'}} fill src={`https://image.tmdb.org/t/p/original/${movieDetail?.backdrop_path || movieDetail?.poster_path}`}  />
-        <div className='absolute'>
-            <div className='text-4xl font-bold my-3'> {movieDetail?.title} </div>
+        <Image style={{objectFit:'cover'}} className='px-12  relative' fill src={`https://image.tmdb.org/t/p/original/${movieDetail?.backdrop_path || movieDetail?.poster_path}`}  />
+        <div className='absolute left-[5rem] top-[5rem] '>
+            <div className='text-5xl font-bold my-3'> {movieDetail?.title} </div>
             <div className='w-1/2'> {movieDetail?.overview} </div>
             <div className='w-1/2'> {movieDetail?.overview} </div>
             <div className='my-3'>{movieDetail?.release_date} - {movieDetail?.vote_average} </div>
             <div className=' my-2 border w-32 p-2 rounded-md text-center text-lg cursor-pointer hover:bg-white hover:text-black transition-[2s]'> Trail</div>
         </div>
 
-    </div>
+    </motion.div>
   )
 }
 

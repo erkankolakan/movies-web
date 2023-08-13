@@ -27,7 +27,7 @@ const Tabs = () => {
 
 
   return (
-    <div className=' kolakan font-bold flex items-center justify-center gap-5  p-5 m-5 bg-gray-200 dark:bg-gray-900 ' >
+    <div className=' rounded-xl kolakan font-bold flex items-center justify-center gap-5  p-5 m-5 bg-gray-200 dark:bg-gray-900 ' >
      {
         tabs.map((tab ,i) => (
             <Link key={i} href={`/?genre=${tab.url}`} className={`'cursor-pointer hover:opacity-75 transition-opacity' ${tab.url=== genre ?  "underline-offset-4 text-amber-500 underline" :" " } `}>{tab.name}</Link>
